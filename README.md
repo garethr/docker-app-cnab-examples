@@ -2,6 +2,11 @@
 
 This examples in this repository show some basic examples of using `docker-app`, in particular showing some of the CNAB integration details.Feel free to work through each of the examples in order, pick and choose, or modify for your own application.
 
+* [A simple Compose Hello World example](https://github.com/garethr/docker-app-cnab-examples/tree/master/app1)
+* [pushing a CNAB to Docker Hub](https://github.com/garethr/docker-app-cnab-examples/tree/master/app2)
+* [CNAB hello world example](https://github.com/garethr/docker-app-cnab-examples/tree/master/app3)
+* [Installing a Helm chart using Docker App and CNAB](https://github.com/garethr/docker-app-cnab-examples/tree/master/app4)
+
 
 ## Detailed setup instructions
 
