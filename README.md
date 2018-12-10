@@ -9,8 +9,8 @@ Most of this work is moving quickly so official installation instructions and pa
 
 ### Docker App
 
-Binaries for both Docker App and Duffle can be downloaded here: https://github.com/docker/app-cnab/releases/tag/v0.7.3
-Take the binaries you need, rename them to `docker-app[.exe]` and `duffle[.exe]` and put them somewhere in your PATH
+Binaries for both Docker App can be downloaded here: https://github.com/docker/app-cnab/releases/tag/v0.7.3
+Take the binaries you need, rename them to `docker-app` (or `docker-app.exe` on Windows) and and put them somewhere in your PATH
 
 ### Credentials
 
@@ -42,7 +42,7 @@ export DOCKER_TARGET_CONTEXT=local
 
 ### Duffle
 
-Some examples also use `duffle`, the CNAB reference client. This can be downloaded as part of the Docker App release. One you have `duffle` installed you should run the following to create various directories and files.
+Some examples also use `duffle`, the CNAB reference client. This can be downloaded from https://github.com/deislabs/duffle/releases. Once you have `duffle` installed you should run the following to create various directories and files.
 
 ```console
 duffle init
@@ -65,7 +65,12 @@ The add those credentials to the duffle store:
 duffle credentials add local.yaml
 ```
 
-Additionaly, if you want to create a credentialset suitable for manipulating docker-app based package with duffle, you can execute `docker-app add-credentialset <duffle credentialset name> <docker context name>`. Then you will be able to call `duffle status|upgrade|uninstall <installation name> -c <credentialset name>` on installations done with `docker-app install`.
+Additionaly, if you want to create a credentialset suitable for manipulating docker-app based packages with duffle, you can run:
+
+```
+docker-app add-credentialset <duffle credentialset name> <docker context name>
+``` 
+
 
 ### Helm
 
