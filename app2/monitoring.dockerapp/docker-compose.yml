@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  prometheus:
+    image: prom/prometheus:${versions.prometheus}
+    ports:
+      - ${ports.prometheus}:9090
+
+  alertmanager:
+    image: prom/alertmanager:${versions.alertmanager}
+    ports:
+      - ${ports.alertmanager}:9093

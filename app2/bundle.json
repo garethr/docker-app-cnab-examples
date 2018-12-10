@@ -1,0 +1,101 @@
+{
+	"name": "monitoring",
+	"version": "0.1.0",
+	"description": "A basic prometheus stack",
+	"maintainers": [
+		{
+			"name": "Gareth Rushgrove",
+			"email": "garethr@docker.com",
+			"url": ""
+		}
+	],
+	"invocationImages": [
+		{
+			"imageType": "docker",
+			"image": "monitoring:0.1.0-invoc"
+		}
+	],
+	"images": null,
+	"actions": {
+		"inspect": {
+			"Modifies": false
+		}
+	},
+	"parameters": {
+		"docker.kubernetes-namespace": {
+			"type": "string",
+			"defaultValue": "",
+			"required": false,
+			"metadata": {
+				"description": "Namespace in which to deploy"
+			},
+			"destination": {
+				"path": "",
+				"env": "DOCKER_KUBERNETES_NAMESPACE"
+			}
+		},
+		"docker.orchestrator": {
+			"type": "string",
+			"defaultValue": "",
+			"allowedValues": [
+				"",
+				"swarm",
+				"kubernetes"
+			],
+			"required": false,
+			"metadata": {
+				"description": "Orchestrator on which to deploy"
+			},
+			"destination": {
+				"path": "",
+				"env": "DOCKER_STACK_ORCHESTRATOR"
+			}
+		},
+		"ports.alertmanager": {
+			"type": "string",
+			"defaultValue": "9093",
+			"required": false,
+			"metadata": {},
+			"destination": {
+				"path": "",
+				"env": "docker_param1"
+			}
+		},
+		"ports.prometheus": {
+			"type": "string",
+			"defaultValue": "9090",
+			"required": false,
+			"metadata": {},
+			"destination": {
+				"path": "",
+				"env": "docker_param2"
+			}
+		},
+		"versions.alertmanager": {
+			"type": "string",
+			"defaultValue": "latest",
+			"required": false,
+			"metadata": {},
+			"destination": {
+				"path": "",
+				"env": "docker_param3"
+			}
+		},
+		"versions.prometheus": {
+			"type": "string",
+			"defaultValue": "latest",
+			"required": false,
+			"metadata": {},
+			"destination": {
+				"path": "",
+				"env": "docker_param4"
+			}
+		}
+	},
+	"credentials": {
+		"docker.context": {
+			"path": "/cnab/app/context.dockercontext",
+			"env": ""
+		}
+	}
+}

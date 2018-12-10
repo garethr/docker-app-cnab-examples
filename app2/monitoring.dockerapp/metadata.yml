@@ -1,0 +1,6 @@
+version: 0.1.0
+name: monitoring
+description: A basic prometheus stack 
+maintainers:
+  - name: Gareth Rushgrove
+    email: garethr@docker.com

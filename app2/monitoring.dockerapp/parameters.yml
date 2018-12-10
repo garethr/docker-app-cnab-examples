@@ -1,0 +1,6 @@
+ports:
+    prometheus: 9090
+    alertmanager: 9093
+versions:
+    prometheus: latest
+    alertmanager: latest
