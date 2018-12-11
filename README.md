@@ -14,7 +14,7 @@ Most of this work is moving quickly so official installation instructions and pa
 
 ### Docker App
 
-Binaries for both Docker App can be downloaded here: https://github.com/docker/app-cnab/releases/tag/v0.7.3
+Binaries for both Docker App can be downloaded here: https://github.com/docker/app/releases/
 Take the binaries you need, rename them to `docker-app` (or `docker-app.exe` on Windows) and and put them somewhere in your PATH
 
 ### Credentials
